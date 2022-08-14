@@ -20,7 +20,7 @@ No. This mod is not whitelisted and will de-rank your server. Any XP gained will
 [/olist]
 
 [h1]Setup (KFAAL.ini)[/h1]
-Config will be created at the first start.
+Config will be created at the first start[b]*[/b].
 [list]
 [*]Use [b]AdminId[/b] to set the list of admins. You can use UniqueID or SteamID;
 [/list]
@@ -37,6 +37,14 @@ SteamID can also be obtained from the player's profile, look at the URL:
 
 If a player uses a nickname in a link to their profile, then add this to the profile url: [b]?xml=1[/b]
 [img]https://raw.githubusercontent.com/GenZmeY/KF2-AdminAutoLogin/master/PublicationContent/ID3.png[/img]
+
+[h1]Troubleshooting[/h1]
+[b](*)[/b] If your config is not created for some reason, create it manually with the following content:
+[b][AAL.AAL]
+Version=0
+[/b]
+
+Then start the server and check the file again - config content should be generated.
 
 [h1]Sources[/h1]
 [url=https://github.com/GenZmeY/KF2-AdminAutoLogin]https://github.com/GenZmeY/KF2-AdminAutoLogin[/url] [b](GNU GPLv3)[/b]
