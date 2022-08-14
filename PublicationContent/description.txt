@@ -1,0 +1,43 @@
+[img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-AdminAutoLogin[/img] [img]https://img.shields.io/steam/favorites/2848836389[/img] [img]https://img.shields.io/steam/update-date/2848836389[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2848836389][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-AdminAutoLogin[/img][/url]
+
+[h1]Description[/h1]
+Small server-side mutator that allows specified players to automatically login as an admin.
+
+[h1]Whitelisted?[/h1]
+No. This mod is not whitelisted and will de-rank your server. Any XP gained will not be saved.
+
+[h1]Usage (server)[/h1]
+[b]Note:[/b] [i]If you don't understand what is written here, read the article [url=https://wiki.killingfloor2.com/index.php?title=Dedicated_Server_(Killing_Floor_2)][u]Dedicated Server (KF2 wiki)[/u][/url] before following these instructions.[/i]
+[olist]
+[*]Open your [b]PCServer-KFEngine.ini[/b] / [b]LinuxServer-KFEngine.ini[/b];
+[*]Find the [b][IpDrv.TcpNetDriver][/b] section and make sure that there is a line (add if not):
+[b]DownloadManagers=OnlineSubsystemSteamworks.SteamWorkshopDownload[/b]
+❗️ If there are several [b]DownloadManagers=[/b] then the line above should be the first ❗️
+[*]Add the following string to the [b][OnlineSubsystemSteamworks.KFWorkshopSteamworks][/b] section (create one if it doesn't exist):
+[b]ServerSubscribedWorkshopItems=2848836389[/b]
+[*]Start the server and wait until the mutator is downloading;
+[*]Add mutator to server start parameters: [b]?Mutator=AAL.AALMut[/b] and restart the server.
+[/olist]
+
+[h1]Setup (KFAAL.ini)[/h1]
+Config will be created at the first start.
+[list]
+[*]Use [b]AdminId[/b] to set the list of admins. You can use UniqueID or SteamID;
+[/list]
+
+[h1]Getting ID[/h1]
+You can view the Steam ID and UniqueID in WebAdmin on the PLAYERS tab:
+[img]https://raw.githubusercontent.com/GenZmeY/KF2-AdminAutoLogin/master/PublicationContent/ID1.png[/img]
+
+But don't try to use the SteamID from here for EGS players - it won't work. SteamID is for Steam players only.
+UniqueID is suitable for all platforms.
+
+SteamID can also be obtained from the player's profile, look at the URL:
+[img]https://raw.githubusercontent.com/GenZmeY/KF2-AdminAutoLogin/master/PublicationContent/ID2.png[/img]
+
+If a player uses a nickname in a link to their profile, then add this to the profile url: [b]?xml=1[/b]
+SteamID will be at the beginning:
+[img]https://raw.githubusercontent.com/GenZmeY/KF2-AdminAutoLogin/master/PublicationContent/ID3.png[/img]
+
+[h1]Sources[/h1]
+[url=https://github.com/GenZmeY/KF2-AdminAutoLogin]https://github.com/GenZmeY/KF2-AdminAutoLogin[/url] [b](GNU GPLv3)[/b]
