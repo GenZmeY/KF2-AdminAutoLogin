@@ -36,7 +36,6 @@ SteamID can also be obtained from the player's profile, look at the URL:
 [img]https://raw.githubusercontent.com/GenZmeY/KF2-AdminAutoLogin/master/PublicationContent/ID2.png[/img]
 
 If a player uses a nickname in a link to their profile, then add this to the profile url: [b]?xml=1[/b]
-SteamID will be at the beginning:
 [img]https://raw.githubusercontent.com/GenZmeY/KF2-AdminAutoLogin/master/PublicationContent/ID3.png[/img]
 
 [h1]Sources[/h1]
