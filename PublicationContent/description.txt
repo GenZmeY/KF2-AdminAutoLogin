@@ -38,6 +38,7 @@ Unfortunately I can't do anything about it because it's a game problem (not muta
 [h1]Setup (KFAAL.ini)[/h1]
 [list]
 [*]Use [b]AdminId[/b] to set the list of admins. You can use UniqueID or SteamID;
+[*]Set [b]bAutoEnableCheats=True[/b] to automatically enable cheats for admins.
 [/list]
 
 [h1]Getting ID[/h1]
