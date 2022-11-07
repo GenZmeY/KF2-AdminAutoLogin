@@ -1,15 +1,19 @@
 class AAL extends Info
 	config(AAL);
 
-const LatestVersion = 1;
+const LatestVersion = 2;
+
+const ProfileURL = "https://steamcommunity.com/profiles/";
 
 const CfgAdminList = class'AdminList';
 
 var private config int         Version;
 var private config E_LogLevel  LogLevel;
+var private config bool        bAutoEnableCheats;
 
 var private OnlineSubsystem    OS;
 var private Array<UniqueNetId> AdminUIDList;
+var private Array<UniqueNetId> AdminUIDListActive;
 
 public simulated function bool SafeDestroy()
 {
@@ -61,6 +65,9 @@ private function PreInit()
 	{
 		case `NO_CONFIG:
 			`Log_Info("Config created");
+			
+		case 1:
+			bAutoEnableCheats = false;
 			
 		case MaxInt:
 			`Log_Info("Config updated to version" @ LatestVersion);
@@ -116,7 +123,6 @@ public function NotifyLogin(Controller C)
 	local PlayerReplicationInfo PRI;
 	local String UniqueID;
 	local String SteamID;
-	local String Profile;
 	
 	`Log_Trace();
 	
@@ -127,16 +133,25 @@ public function NotifyLogin(Controller C)
 	if (AdminUIDList.Find('Uid', PRI.UniqueId.Uid) != INDEX_NONE)
 	{
 		PRI.bAdmin = true;
+	}
+	
+	if (PRI.bAdmin)
+	{
+		AdminUIDListActive.AddItem(PRI.UniqueId);
 		
 		UniqueID = OS.UniqueNetIdToString(PRI.UniqueId);
 		
 		PC = PlayerController(C);
+		
+		if (PC != None && bAutoEnableCheats)
+		{
+			PC.AddCheats(true);
+		}
+		
 		if (PC != None && !PC.bIsEosPlayer)
 		{
 			SteamID = OS.UniqueNetIdToInt64(PRI.UniqueId);
-			Profile = "https://steamcommunity.com/profiles/" $ SteamID;
-			
-			`Log_Info("Admin login:" @ PRI.PlayerName @ "(" $ UniqueID $ "," @ SteamID $ "," @ Profile $ ")");
+			`Log_Info("Admin login:" @ PRI.PlayerName @ "(" $ UniqueID $ "," @ SteamID $ "," @ ProfileURL $ SteamID $ ")");
 		}
 		else
 		{
@@ -147,7 +162,23 @@ public function NotifyLogin(Controller C)
 
 public function NotifyLogout(Controller C)
 {
+	local PlayerReplicationInfo PRI;
+	local String UniqueID;
+	local String SteamID;
+	
 	`Log_Trace();
+	
+	if (C == None || C.PlayerReplicationInfo == None) return;
+	
+	PRI = C.PlayerReplicationInfo;
+	
+	if (PRI.bAdmin || AdminUIDListActive.Find('Uid', PRI.UniqueId.Uid) != INDEX_NONE)
+	{
+		AdminUIDListActive.RemoveItem(PRI.UniqueId);
+		UniqueID = OS.UniqueNetIdToString(PRI.UniqueId);
+		SteamID = OS.UniqueNetIdToInt64(PRI.UniqueId);
+		`Log_Info("Admin logout:" @ PRI.PlayerName @ "(" $ UniqueID $ "," @ SteamID $ "," @ ProfileURL $ SteamID $ ")");
+	}
 }
 
 defaultproperties
