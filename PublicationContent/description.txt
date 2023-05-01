@@ -1,4 +1,4 @@
-[img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-AdminAutoLogin[/img] [img]https://img.shields.io/steam/favorites/2848836389[/img] [img]https://img.shields.io/steam/update-date/2848836389[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2848836389][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-AdminAutoLogin[/img][/url]
+[img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-AdminAutoLogin[/img] [img]https://img.shields.io/steam/downloads/2848836389[/img] [img]https://img.shields.io/steam/favorites/2848836389[/img] [img]https://img.shields.io/steam/update-date/2848836389[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2848836389][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-AdminAutoLogin[/img][/url]
 
 [h1]Description[/h1]
 Small server-side mutator that allows specified players to automatically login as an admin.
