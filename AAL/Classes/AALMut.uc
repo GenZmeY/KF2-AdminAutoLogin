@@ -10,19 +10,19 @@ public simulated function bool SafeDestroy()
 public event PreBeginPlay()
 {
 	Super.PreBeginPlay();
-	
+
 	if (WorldInfo.NetMode == NM_Client) return;
-	
+
 	foreach WorldInfo.DynamicActors(class'AAL', AAL)
 	{
 		break;
 	}
-	
+
 	if (AAL == None)
 	{
 		AAL = WorldInfo.Spawn(class'AAL');
 	}
-	
+
 	if (AAL == None)
 	{
 		`Log_Base("FATAL: Can't Spawn 'AAL'");
@@ -33,7 +33,7 @@ public event PreBeginPlay()
 public function AddMutator(Mutator Mut)
 {
 	if (Mut == Self) return;
-	
+
 	if (Mut.Class == Class)
 		Mut.Destroy();
 	else
@@ -43,14 +43,14 @@ public function AddMutator(Mutator Mut)
 public function NotifyLogin(Controller C)
 {
 	AAL.NotifyLogin(C);
-	
+
 	Super.NotifyLogin(C);
 }
 
 public function NotifyLogout(Controller C)
 {
 	AAL.NotifyLogout(C);
-	
+
 	Super.NotifyLogout(C);
 }
 
