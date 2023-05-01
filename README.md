@@ -6,13 +6,13 @@
 [![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/GenZmeY/KF2-AdminAutoLogin)](https://github.com/GenZmeY/KF2-AdminAutoLogin/tags)
 [![GitHub](https://img.shields.io/github/license/GenZmeY/KF2-AdminAutoLogin)](LICENSE)
 
-# Description
+## Description
 Small server-side mutator that allows specified players to automatically login as an admin.
 
-# Usage & Setup
+## Usage & Setup
 [See steam workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=2848836389)
 
-# Build
+## Build
 **Note:** If you want to build/test/brew/publish a mutator without git-bash and/or scripts, follow [these instructions](https://tripwireinteractive.atlassian.net/wiki/spaces/KF2SW/pages/26247172/KF2+Code+Modding+How-to) instead of what is described here.
 1. Install [Killing Floor 2](https://store.steampowered.com/app/232090/Killing_Floor_2/), Killing Floor 2 - SDK and [git for windows](https://git-scm.com/download/win);
 2. open git-bash and go to any folder where you want to store sources:  
@@ -26,9 +26,9 @@ Small server-side mutator that allows specified players to automatically login a
 5. The compiled files will be here:  
 `C:\Users\<USERNAME>\Documents\My Games\KillingFloor2\KFGame\Unpublished\BrewedPC\Script\`
 
-# Bug reports
+## Bug reports
 If you find a bug, go to the [issue page](https://github.com/GenZmeY/KF2-AdminAutoLogin/issues) and check if there is a description of your bug. If not, create a new issue.  
 Describe what the bug looks like and how reproduce it.  
 
-# License
+## License
 [GNU GPLv3](LICENSE)  
