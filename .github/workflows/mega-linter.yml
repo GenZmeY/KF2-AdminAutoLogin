@@ -41,11 +41,7 @@ jobs:
         uses: oxsecurity/megalinter@7e042c726c68415475b05a65a686c612120a1232
         id: ml
         env:
-          VALIDATE_ALL_CODEBASE: >-
-            ${{
-              github.event_name == 'push' &&
-              contains(fromJSON('["refs/heads/main", "refs/heads/master"]'), github.ref)
-            }}
+          VALIDATE_ALL_CODEBASE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Archive production artifacts
