@@ -19,7 +19,7 @@ https://forums.tripwireinteractive.com/index.php?threads/whitelisting-mods-and-m
 [*]Add the following string to the [b][OnlineSubsystemSteamworks.KFWorkshopSteamworks][/b] section (create one if it doesn't exist):
 [b]ServerSubscribedWorkshopItems=2848836389[/b]
 [*]Start the server and wait until the mutator is downloading;
-[*]Add mutator to server start parameters: [b]?Mutator=AAL.AALMut[/b] and restart the server.
+[*]Add mutator to server start parameters: [b]?Mutator=AAL.Mut[/b] and restart the server.
 [/olist]
 
 [h1]Important setup information[/h1]
