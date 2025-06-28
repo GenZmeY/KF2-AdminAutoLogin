@@ -1,4 +1,4 @@
-[img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-AdminAutoLogin[/img] [img]https://img.shields.io/steam/downloads/2848836389[/img] [img]https://img.shields.io/steam/favorites/2848836389[/img] [img]https://img.shields.io/steam/update-date/2848836389[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2848836389][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-AdminAutoLogin[/img][/url]
+[img]https://img.shields.io/static/v1?logo=GitHub&labelColor=gray&color=blue&logoColor=white&label=&message=Open Source[/img] [img]https://img.shields.io/github/license/GenZmeY/KF2-AdminAutoLogin[/img] [img]https://img.shields.io/steam/favorites/2848836389[/img] [img]https://img.shields.io/steam/update-date/2848836389[/img] [url=https://steamcommunity.com/sharedfiles/filedetails/changelog/2848836389][img]https://img.shields.io/github/v/tag/GenZmeY/KF2-AdminAutoLogin[/img][/url]
 
 [h1]📋 Description[/h1]
 Small server-side mutator that allows specified players to automatically login as an admin.
@@ -65,4 +65,4 @@ If a player uses a nickname in a link to their profile, then add this to the pro
 ⛔️ Development has stopped: I no longer have the time or motivation to maintain this mod. No further updates or bug fixes are planned.
 
 [h1]📜 Sources[/h1]
-https://github.com/GenZmeY/KF2-AdminAutoLogin [b](GNU GPLv3)[/b]
+https://github.com/GenZmeY/KF2-AdminAutoLogin [b](GPL-3.0-or-later)[/b]
